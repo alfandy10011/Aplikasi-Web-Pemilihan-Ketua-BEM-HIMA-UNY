@@ -30,7 +30,7 @@
 	echo $this->Pemilwa_model->pengaturan('jam_buka');
 	echo " - ";
 	echo $this->Pemilwa_model->pengaturan('jam_tutup');
-	echo "</b> WIB.";
+	echo "</b> WITA.";
 	?></p>
 	<hr>
 	<a href="<?php echo base_url('vote'); ?>" class="btn btn-default">Coba Lagi</a>

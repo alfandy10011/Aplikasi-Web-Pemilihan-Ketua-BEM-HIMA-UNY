@@ -76,12 +76,12 @@ class Kandidat extends CI_Controller {
 			//konfigurasi untuk foto kandidat
 			$config['upload_path'] = './asset/upload/img/';
 			$config['allowed_types'] = 'png|jpg|jpeg|svg';
-		    $config['max_size'] = '5000';
-            $config['max_width'] = 300;
-            $config['max_height'] = 300;
-            $config['min_width'] = 300;
-            $config['min_height'] = 300;
-            $config['max_filename'] = 100;
+		    // $config['max_size'] = '5000';
+      //       $config['max_width'] = 300;
+      //       $config['max_height'] = 300;
+      //       $config['min_width'] = 300;
+      //       $config['min_height'] = 300;
+      //       $config['max_filename'] = 100;
 		    $this->load->library('upload', $config);
 	        $this->upload->initialize($config);
 		    // $this->upload->do_upload('exel');

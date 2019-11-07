@@ -11,6 +11,7 @@
       }
       ?>
       <p class="lead">Silakan masukkan username dan password.</p>
+      <?php //echo password_hash('kasim',PASSWORD_DEFAULT)?>
       
       <?php
       echo form_open('admin/login'); ?>
