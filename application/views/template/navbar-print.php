@@ -1,5 +1,5 @@
 <nav style="text-align: center">
-	<img width="50px" style="margin-right: 200px" alt="Brand" src="<?php echo base_url('asset/img/uny.gif') ?>">
+	<!-- <img width="50px" style="margin-right: 200px" alt="Brand" src="<?php echo base_url('asset/img/uny.gif') ?>"> -->
 	<img width="45px" alt="Brand" src="<?php echo base_url('asset/img/kpu.png') ?>">
 	<br><br>
 	<b style="font-size:18pt">KOMISI PEMILIHAN UMUM </b><br>

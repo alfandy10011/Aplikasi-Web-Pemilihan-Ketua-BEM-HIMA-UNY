@@ -1,7 +1,7 @@
 <nav class="navbar text-center" style="height: 100px; padding-top: 1%; background-color: #EA2027">
 	<div class="col-sm-2 col-lg-4 hidden-xs">
 		<a href="http://www.uny.ac.id/">
-			<img width="60px" alt="Brand" src="<?php echo base_url('asset/img/uny.gif') ?>">
+			<!-- <img width="60px" alt="Brand" src="<?php echo base_url('asset/img/uny.gif') ?>"> -->
 		</a>
 	</div>
 	<div class="col-sm-8 col-lg-4">
