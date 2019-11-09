@@ -56,14 +56,14 @@
      ?> 
 <hr>
     <?php if (is_null($search_mode)): ?>
-     <span class="pull-right">
+     <!-- <span class="pull-right">
       Filter Jurusan: 
      <a href="<?php echo base_url('pemilih/show/id/MAT'); ?>">MAT</a>
      <a href="<?php echo base_url('pemilih/show/id/FIS'); ?>">FIS</a>
      <a href="<?php echo base_url('pemilih/show/id/BIO'); ?>">BIO</a>
      <a href="<?php echo base_url('pemilih/show/id/KIM'); ?>">KIM</a>
      <a href="<?php echo base_url('pemilih/show/id/IPA'); ?>">IPA</a>
-    </span>
+    </span> -->
     <?php endif ?>
       Total data ditemukan <?php echo $count; ?>
 	<table class="table table-hover table-striped">
