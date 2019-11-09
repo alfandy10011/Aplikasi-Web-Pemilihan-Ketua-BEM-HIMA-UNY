@@ -32,11 +32,11 @@ class Vote extends CI_Controller {
 			//ambil data tanggal yang diijinka untuk dibuka
 			$range = date_range($this->Pemilwa_model->pengaturan('tanggal_mulai'), $this->Pemilwa_model->pengaturan('tanggal_akhir'));
 			//ambil tanggal dan jam sekarang
-			$tgl_sekarang = date('Y-m-j');
+			$tgl_sekarang = date('Y-m-d');
 			$jam_sekarang = date('H:i');
 			
 			//jika dibuka diluar tanggal yang ditentukan
-			if (!(($tgl_sekarang >= $this->Pemilwa_model->pengaturan('tanggal_mulai')) AND ($tgl_sekarang >= $this->Pemilwa_model->pengaturan('tanggal_akhir')))) {
+			if (!(($tgl_sekarang >= $this->Pemilwa_model->pengaturan('tanggal_mulai')) AND ($tgl_sekarang <= $this->Pemilwa_model->pengaturan('tanggal_akhir')))) {
 			//if (!in_array($tgl_sekarang, $range)) {
 				redirect('vote/blok/warning-vote','refresh');
 			} else {
@@ -63,6 +63,9 @@ class Vote extends CI_Controller {
 	**/
 	public function suara($skip = null)
 	{
+		// $tgl_sekarang = date('Y-m-d');	
+		// echo $tgl_sekarang;
+		// die()
 		if (!$this->pemilwa_library->is_loggedin()) {
 			redirect('admin','refresh');
 		}
@@ -70,8 +73,8 @@ class Vote extends CI_Controller {
 		//jika tidak skip
 		if (is_null($skip)) {
 			//cek apakah halaman dibuka pada tanggal yang ditentukan atau tidak
-			$tgl_sekarang = date('Y-m-j');			
-			if ($this->Pemilwa_model->pengaturan('tanggal_hitung') !== $tgl_sekarang) {
+			// $tgl_sekarang = date('Y-m-j');			
+			if ($this->Pemilwa_model->pengaturan('tanggal_hitung') != $tgl_sekarang) {
 				redirect('vote/blok/warning-hitung','refresh');
 			}
 		}

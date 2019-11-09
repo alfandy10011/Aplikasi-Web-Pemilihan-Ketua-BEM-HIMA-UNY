@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="<?php echo base_url('asset/img/kpu.png') ?>">
-    <title>PEMILWA FMIPA UNY</title>
+    <title><?php echo NAMA_APP?></title>
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url('asset/css/bootstrap.min.css') ?>" rel="stylesheet"> 
     <link href="<?php echo base_url('asset/css/prettify.css') ?>" rel="stylesheet"> 

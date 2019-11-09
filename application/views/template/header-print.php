@@ -8,6 +8,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="<?php echo base_url('asset/img/kpu.png') ?>">
-    <title>PEMILWA FMIPA UNY</title>
+    <title><?php echo NAMA_APP?></title>
   </head>
   <body>

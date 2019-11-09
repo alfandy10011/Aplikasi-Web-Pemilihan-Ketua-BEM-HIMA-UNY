@@ -1,10 +1,10 @@
       <footer class="footer" style="background-color: #2f3640; height: 50px; padding-top: 1%">
         <div class="container">
             <div class="col-sm-6">
-              <p class="text-muted" style="color:#dcdde1"><img width="20px" alt="Brand" src="<?php echo base_url('asset/img/kpu.png') ?>"> KPU FMIPA UNY 2018</p>
+              <p class="text-muted" style="color:#dcdde1"><img width="20px" alt="Brand" src="<?php echo base_url('asset/img/kpu.png') ?>"> <?php echo NAMA_APP?> <?php echo date('Y')?></p>
             </div>
             <div class="col-sm-6">
-              <span class="pull-right" style="color: #e1b12c"><a href="<?php echo base_url('admin/panduan') ?>"  style="color: #fbc531">Bantuan</a> | <a href="<?php echo base_url('vote') ?>" style="color: #fbc531">Vote</a></span>
+              <span class="pull-right" style="color: #e1b12c"><!-- <a href="<?php echo base_url('admin/panduan') ?>"  style="color: #fbc531">Bantuan</a> | --> <a href="<?php echo base_url('vote') ?>" style="color: #fbc531">Vote</a></span>
             </div>
             
           
