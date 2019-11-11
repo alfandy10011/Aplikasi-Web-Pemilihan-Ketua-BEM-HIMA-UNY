@@ -38,7 +38,7 @@ class Vote extends CI_Controller {
 			//jika dibuka diluar tanggal yang ditentukan
 			if (!(($tgl_sekarang >= $this->Pemilwa_model->pengaturan('tanggal_mulai')) AND ($tgl_sekarang <= $this->Pemilwa_model->pengaturan('tanggal_akhir')))) {
 			//if (!in_array($tgl_sekarang, $range)) {
-				redirect('vote/blok/warning-vote','refresh');
+				redirect('vote/blok/warning-vote','refresh')
 			} else {
 				//jika dibuka diluar jam yang ditentukan
 				if (!(($jam_sekarang >= $this->Pemilwa_model->pengaturan('jam_buka')) AND ($jam_sekarang <= $this->Pemilwa_model->pengaturan('jam_tutup')))) {
