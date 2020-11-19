@@ -32,7 +32,7 @@ class Pemilih extends CI_Controller {
 	* jurusan = untuk memfilter data berdasarkan jurusan
 	* @return void
 	**/
-	public function show($order = 'id', $jurusan = 'FAK')
+	public function show($order = 'id', $jurusan = '')
 	{
 		if (!$this->pemilwa_library->is_loggedin()) {
 			redirect('admin','refresh');
