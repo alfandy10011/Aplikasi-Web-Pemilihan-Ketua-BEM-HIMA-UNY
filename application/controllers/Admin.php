@@ -145,7 +145,8 @@ class Admin extends CI_Controller {
 		}
 
 		//cek field nim
-		$this->form_validation->set_rules('nim', 'nim', 'required|exact_length[11]');
+		//exact_length[11]
+		$this->form_validation->set_rules('nim', 'NIS/NIP', 'required');
 
 		//jika lolos cek field
 		if ($this->form_validation->run() == TRUE) {		
@@ -194,7 +195,7 @@ class Admin extends CI_Controller {
 				'name' 			=> 'nim',
 				'type'			=> 'text',
 				'class'			=> 'form-control',
-				'placeholder'	=> 'Nomor Induk Mahasiswa',
+				'placeholder'	=> 'NIS/NIP',
 				'id'			=> 'nimToVerif',
 				'autofocus'		=> 'true'
 				 );

@@ -13,7 +13,7 @@
 	      }
 	    ?>
 		<h1>Verifikasi.</h1>
-		Silakan ketik NIM atau scan KTM pemilih yang akan diverifikasi:<hr>
+		Silakan ketik NIS/NIP atau scan KTM pemilih yang akan diverifikasi:<hr>
 		<?php
 		$attributes = array('class'=>'form-inline');
 	    echo form_open('admin/verifikasi/', $attributes); ?>
