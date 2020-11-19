@@ -63,7 +63,7 @@ class Vote extends CI_Controller {
 	**/
 	public function suara($skip = null)
 	{
-		// $tgl_sekarang = date('Y-m-d');	
+		$tgl_sekarang = date('Y-m-d');	
 		// echo $tgl_sekarang;
 		// die()
 		if (!$this->pemilwa_library->is_loggedin()) {
@@ -380,17 +380,17 @@ class Vote extends CI_Controller {
 		    foreach ($this->input->post('no_urut[]') as $n) {
 		    	array_push($nu,$n);
 		    }
-			date_default_timezone_set('Asia/Jakarta');
+			date_default_timezone_set('Asia/Makasar');
 		    $date = date('D j M Y H:i:s');
 
 		    //isi kalimat yang akan dicetak
 		    $printer -> feed();
 		    $printer -> setJustification(Printer::JUSTIFY_CENTER);
 		    $printer -> selectPrintMode(Printer::MODE_DOUBLE_WIDTH);
-		    $printer -> text("PEMILWA ONLINE\n");
+		    $printer -> text(NAMA_APP."\n");
 		    $printer -> selectPrintMode();
-		    $printer -> text("Fakultas Matematika\ndan Ilmu Pengetahuan Alam\n");
-		    $printer -> text("UNY\n");
+		    $printer -> text(NAMA_APP_KET."\n");
+		    $printer -> text("\n");
 		    $i = 0;
 		    foreach ($this->input->post('barcode[]') as $bc) {
 		    	$printer -> feed();
@@ -404,7 +404,7 @@ class Vote extends CI_Controller {
 	    	$printer -> text($date . "\n");
 		    $printer -> feed();
 	    	$printer -> text("Terimakasih telah memberikan hak suara Anda.\n");
-	    	$printer -> text("KPU FMIPA UNY 2018");
+	    	$printer -> text(NAMA_APP." ".date('Y'));
 		    $printer -> feed(4);
 		    $printer -> cut();
 		    $printer -> pulse();
