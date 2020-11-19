@@ -17,7 +17,7 @@
          if (is_array($sukses)) {
            foreach ($sukses as $sk) {
               echo "<div class='alert alert-success'>
-              <strong>Sukses! </strong> NIM ",      
+              <strong>Sukses! </strong> NIS/NIP ",      
                $sk," telah berhasil ditambahkan.</div>";
             }
          } else {
@@ -31,7 +31,7 @@
         if (is_array($error)) {
             foreach ($error as $er) {
               echo "<div class='alert alert-warning'>
-              <strong>Gagal! </strong> NIM ",      
+              <strong>Gagal! </strong> NIS/NIP ",      
                $dp," gagal ditambahkan.</div>";
             }
         } else {          
@@ -48,7 +48,7 @@
       }
       if ($duplikat) {        
           echo "<div class='alert alert-warning'>
-          <strong>Gagal! </strong> NIM terindikasi duplikasi:</div><br>";
+          <strong>Gagal! </strong> NIS/NIP terindikasi duplikasi:</div><br>";
         foreach ($duplikat as $dp) {
           echo $dp,"<br>";
         }
@@ -70,7 +70,7 @@
   <thead>
     <?php if (is_null($search_mode)): ?>
     <tr>
-      <th scope="col">NIM <a href="<?php echo base_url('pemilih/show/id') ?>">^</a></th>
+      <th scope="col">NIS/NIP <a href="<?php echo base_url('pemilih/show/id') ?>">^</a></th>
       <th scope="col">Nama <a href="<?php echo base_url('pemilih/show/nama') ?>">^</a></th>
       <th scope="col">Dapil <a href="<?php echo base_url('pemilih/show/dapil') ?>">^</a></th>
       <th scope="col">Status <a href="<?php echo base_url('pemilih/show/status') ?>">^</a></th>
@@ -78,7 +78,7 @@
     </tr>
     <?php else: ?>
     <tr>
-      <th scope="col">NIM </th>
+      <th scope="col">NIS/NIP </th>
       <th scope="col">Nama </th>
       <th scope="col">Dapil </th>
       <th scope="col">Status </th>
