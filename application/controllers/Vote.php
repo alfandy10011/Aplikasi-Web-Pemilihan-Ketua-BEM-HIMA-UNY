@@ -100,14 +100,14 @@ class Vote extends CI_Controller {
 	{	
 		//cek field nim
 		// exact_length[11]
-		$this->form_validation->set_rules('nim', 'NIM', 'required');
+		$this->form_validation->set_rules('nim', 'NIS/NIP', 'required');
 		//jika lolos cek field
 		if ($this->form_validation->run() == TRUE) {
 			//ambil data pemilih
 			$voter_data = $this->Pemilwa_model->get_akun($this->input->post('nim'), 'pemilih');
 			//jika nim tidak ditemukan
 			if ($voter_data == FALSE) {
-				$this->session->set_flashdata('error', 'NIM tidak terdaftar.');
+				$this->session->set_flashdata('error', 'NIS/NIP tidak terdaftar.');
 				redirect('vote/login','refresh');
 			}
 
@@ -118,7 +118,7 @@ class Vote extends CI_Controller {
 				case '0':
 					//jika pengaturan verifikasi diaktifkan
 					if ($this->Pemilwa_model->pengaturan('verifikasi_voter')) {						
-						$this->session->set_flashdata('error', 'NIM belum diverifikasi panitia, silakan ke meja verifikasi terlebih dahulu.');
+						$this->session->set_flashdata('error', 'NIS/NIP belum diverifikasi panitia, silakan ke meja verifikasi terlebih dahulu.');
 						redirect('vote/login','refresh');
 					//jika pengaturan verifikasi dinonaktifkan
 					} else {
@@ -166,16 +166,16 @@ class Vote extends CI_Controller {
 					break;
 				//jika sudah pernah memeilih
 				case '2':
-					$this->session->set_flashdata('error', 'NIM telah memberikan hak suara.');
+					$this->session->set_flashdata('error', 'NIS/NIP telah memberikan hak suara.');
 					redirect('vote/login','refresh');
 					break;
 				//jika diblokir
 				case '3':
-					$this->session->set_flashdata('error', 'NIM diblokir.');
+					$this->session->set_flashdata('error', 'NIS/NIP diblokir.');
 					redirect('vote/login','refresh');
 					break;				
 				default:
-					$this->session->set_flashdata('error', 'NIM tidak terdaftar di daftar pemilih tetap.');
+					$this->session->set_flashdata('error', 'NIS/NIP tidak terdaftar di daftar pemilih tetap.');
 					redirect('vote/login','refresh');
 					break;
 			}
@@ -191,7 +191,7 @@ class Vote extends CI_Controller {
 				'name' 			=> 'nim',
 				'type' 			=> 'text',
 				'class'			=> 'ui-hidden-accessible',
-				'placeholder' 	=> 'Nomor Induk Mahasiswa',
+				'placeholder' 	=> 'NIS/NIP',
 				'id'			=> 'formNim',
 				'autofocus'		=> true,
 				'autocomplete'	=> 'on',

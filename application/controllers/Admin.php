@@ -154,7 +154,7 @@ class Admin extends CI_Controller {
 
 			//jika nim tidak ada di dalam database
 			if ($this->Pemilwa_model->get_akun($id, 'pemilih') == FALSE) {
-				$this->session->set_flashdata('error', 'NIM '.$id.' tidak terdaftar.');
+				$this->session->set_flashdata('error', 'NIS/NIP '.$id.' tidak terdaftar.');
 				redirect('admin/verifikasi','refresh');
 			}
 
@@ -163,26 +163,26 @@ class Admin extends CI_Controller {
 				$isi = array('status' => '1');
 				//ubah status jadi 1
 				$this->Pemilwa_model->update_data('pemilih', $id , $isi);
-				$this->session->set_flashdata('sukses', 'NIM terdaftar dan telah diaktifkan.');
+				$this->session->set_flashdata('sukses', 'NIS/NIP terdaftar dan telah diaktifkan.');
 				redirect('admin/verifikasi','refresh');
 			//jika status nim tak sesuai
 			} else {
 				$status = $this->Pemilwa_model->get_akun($id, 'pemilih')->status;
 				switch ($status) {
 					case '1':
-						$this->session->set_flashdata('error', 'NIM terdaftar tetapi telah teraktifasi sebelumnya.');
+						$this->session->set_flashdata('error', 'NIS/NIP terdaftar tetapi telah teraktifasi sebelumnya.');
 						redirect('admin/verifikasi','refresh');
 						break;					
 					case '2':
-						$this->session->set_flashdata('error', 'NIM terdaftar tetapi telah memberikan hak suara.');
+						$this->session->set_flashdata('error', 'NIS/NIP terdaftar tetapi telah memberikan hak suara.');
 						redirect('admin/verifikasi','refresh');
 						break;
 					case '3':
-						$this->session->set_flashdata('error', 'NIM terdaftar tetapi diblokir.');
+						$this->session->set_flashdata('error', 'NIS/NIP terdaftar tetapi diblokir.');
 						redirect('admin/verifikasi','refresh');
 						break;
 					default:
-						$this->session->set_flashdata('error', 'NIM tidak terdaftar.');
+						$this->session->set_flashdata('error', 'NIS/NIP tidak terdaftar.');
 						redirect('admin/verifikasi','refresh');
 						break;
 				}

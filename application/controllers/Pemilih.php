@@ -195,7 +195,7 @@ class Pemilih extends CI_Controller {
 
 		//cek nilai tiap field
 		// exact_length[11]
-		$this->form_validation->set_rules('id', 'NIM', 'required|is_unique[pemilih.id]');
+		$this->form_validation->set_rules('id', 'NIS/NIP', 'required|is_unique[pemilih.id]');
 		$this->form_validation->set_rules('nama', 'Nama', 'required');
 		$this->form_validation->set_rules('dapil[]', 'Dapil', 'required');
 
@@ -235,7 +235,7 @@ class Pemilih extends CI_Controller {
 				'name' 			=> 'id',
 				'type' 			=> 'text',
 				'class'			=> 'form-control',
-				'placeholder' 	=> 'NIM',
+				'placeholder' 	=> 'NIS/NIP',
 				 );
 
 			$var['nama'] = array(
