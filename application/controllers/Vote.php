@@ -99,7 +99,8 @@ class Vote extends CI_Controller {
 	public function login()
 	{	
 		//cek field nim
-		$this->form_validation->set_rules('nim', 'NIM', 'required|exact_length[11]');
+		// exact_length[11]
+		$this->form_validation->set_rules('nim', 'NIM', 'required');
 		//jika lolos cek field
 		if ($this->form_validation->run() == TRUE) {
 			//ambil data pemilih

@@ -57,6 +57,8 @@ $autoload['packages'] = array();
 | in the controller:
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
+encryption
+encrypt
 */
 $autoload['libraries'] = array('session', 'database', 'pemilwa_library', 'form_validation', 'encrypt');
 
